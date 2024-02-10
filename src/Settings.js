@@ -1,4 +1,5 @@
 import ReactSlider from 'react-slider'
+import './slider.css'
 
 function Settings() {
     return(
