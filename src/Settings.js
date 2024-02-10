@@ -14,6 +14,15 @@ function Settings() {
                 max = {120}
             />
             <label>break minutes:</label>
+
+            <ReactSlider 
+                className={'slider green'}
+                thumbClassName={'thumb'}
+                trackClassName={'track'}
+                value = {45}
+                min={1}
+                max = {120}
+            />
         </div>
     );
 }

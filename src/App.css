@@ -1,5 +1,6 @@
 :root{
     --red: #E51C1C;
+    --green: #50E450;
 }
 
 body {
@@ -40,4 +41,8 @@ button.with-text svg{
 
 label {
     display: block;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-transform: capitalize;
 }
+

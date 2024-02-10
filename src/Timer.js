@@ -7,6 +7,7 @@ import SettingsButton from './SettingsButton';
 const red = '#E51C1C'
 
 
+
 function Timer() {
     return (
         <div>
