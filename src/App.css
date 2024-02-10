@@ -34,3 +34,6 @@ button.with-text svg{
     margin-right: 5px;
 }
 
+label {
+    display: block;
+}
