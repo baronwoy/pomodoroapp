@@ -17,3 +17,12 @@ button {
     width: 100px;
 
 }
+
+button.with-text{
+    width: auto;
+    background-color: #ad5b5be0 ;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    line-height: 36px;
+}
