@@ -1,4 +1,10 @@
 # POMODORO WEBAPP
 
-Simple Pomodoro app in ReactJs, 2 Modes Pomodoro and Short Break (changeable in settings) 
+### Project Aim
+Simple Pomodoro app with 2 modes to assist with Time Management for tasks, 
+As an avenue to further my skills in Javascript and ReactJs
 
+### Built With
+
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,react)](https://skillicons.dev) <br />
+Javascript, HTML/CSS, ReactJs
