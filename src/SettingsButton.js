@@ -10,4 +10,4 @@ function SettingsButton(props) {
     )
 }
 
-export default SettingsButton
+export default SettingsButton;

@@ -6,13 +6,13 @@ import SettingsButton from './SettingsButton';
 import { useContext, useState, useEffect, useRef } from 'react';
 import SettingsContext from './SettingsContext';
 const red = '#E51C1C'
-
+const green = '#50E450'
 
 
 function Timer() {
     const settingsInfo = useContext(SettingsContext)
 
-    const [isPaused, setIsPaused] = useState(false)
+    const [isPaused, setIsPaused] = useState(true)
     const [mode, setMode] = useState('Work'); // work/break/null
     const [secondsLeft, setSecondsLeft] = useState(0)
 
@@ -53,22 +53,34 @@ function Timer() {
             }
 
             tick();
-        }, 1000)
+        }, 1000 )
 
-        return clearInterval(interval);
+        return () => clearInterval(interval);
     },  [settingsInfo]);
+
+    const totalSeconds = mode === 'work' ? settingsInfo.workMinutes * 60 : settingsInfo.breakMinutes * 60;
+    const percentage = Math.round(secondsLeft / totalSeconds * 100) 
+
+    const minutes = Math.floor(secondsLeft / 60); // 44.8
+    let seconds = secondsLeft % 60;
+    if (seconds < 10) seconds = '0'+seconds;
 
     return (
         <div>
-            <CircularProgressbar value={60} text={`60%`} styles={buildStyles({
+            <CircularProgressbar 
+            value={percentage} 
+            text={minutes + ':' + seconds} 
+            styles={buildStyles({
                 textColor: '#fff',
-                pathColor: red,
+                pathColor: mode === 'work' ? red : green,
                 trailColor: '#333'
             })} />
 
             <div style={{marginTop: '20px;'}}>
 
-                {isPaused ? <PlayButton /> : <PauseButton /> }
+                {isPaused 
+                ? <PlayButton onClick={() => {setIsPaused(false); isPausedRef.current = false;}} /> 
+                : <PauseButton onClick={() => {setIsPaused(true); isPausedRef.current = true;}}/> }
                 
                
             </div>
