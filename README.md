@@ -1,4 +1,4 @@
-# Pomodoro React WebApp
+# Pomodoro App
 
 ### Project Aim
 Simple Pomodoro app with 2 modes to assist with Time Management for tasks like studying, work, etc. <br />
