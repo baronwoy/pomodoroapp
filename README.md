@@ -16,7 +16,7 @@ This module depends upon basic knowledge of [terminal](https://developer.mozilla
 
 
 ```
-git clone https://github.com/baronwoy/Pomodoro-WebApp.git
+git clone https://github.com/baronwoy/pomodoroapp.git
 ```
 <br>
 
