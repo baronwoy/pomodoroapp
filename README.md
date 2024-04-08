@@ -4,6 +4,9 @@
 Simple Pomodoro app with 2 modes to assist with Time Management for tasks like studying, work, etc. <br />
 Used as an avenue to further my skills in Javascript and ReactJs
 
+### Current State:
+<img src="https://github.com/baronwoy/pomodoroapp/assets/157763277/fe3b9827-b96f-458a-82ea-6360b182f34b" width="auto" height="auto">
+
 ### Built With
 
 [![My Skills](https://skillicons.dev/icons?i=js,html,css,react)](https://skillicons.dev) <br />
@@ -37,7 +40,13 @@ npm start
 
 ## Known Issues
 * Does not track your start time or save your preferences, so timer stops if your computer sleeps and the settings need to be reentered when the page is refreshed.
-* When break time is longer than pomodoro time the timers percentage shows as being less than 100 percent even though the timer hasnt started yet
+* When page first loads the circle is shown green when it should be shown red
+* Currently clicking 'Pomodoro' or 'Short Break' has no function
 * Has no long break timer
 
+### Roadmap
+* Implement functionality so a user can click short break to access it without going through pomodoro first and vice-versa
+* Implement long break functionality
+* Make the Settings page more visually appealing and more features to it
+* Implement to-do list funcitonality
 
