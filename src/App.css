@@ -1,23 +1,24 @@
 :root{
     --red: #E51C1C;
-    --green: #50E450;
+    --green: #5CC45C;
 }
 
 body {
-    background-color: #ba8d8d;
+    background-color: rgb(186, 73, 73);
     color: #eee
 }
 
 main {
-    padding-top: 50px;
-    max-width: 340px;
+    padding-top: 100px;
+    max-width: 500px;
     margin: 0 auto;
     text-align: center;
+    font-weight: 500;
 }
 
 button {
     background-color: transparent;
-    color: #eeeeee80;
+    color: #eeeeee;
     border:0;
     display: inline-block;
     width: 100px;
@@ -27,7 +28,7 @@ button {
 
 button.with-text{
     width: auto;
-    background-color: #ad5b5be0 ;
+    background-color: #cb7e7ee0 ;
     border-radius: 10px;
     padding: 10px 20px;
     font-size: 1.4rem;
@@ -45,5 +46,31 @@ label {
     margin-bottom: 10px;
     margin-top: 20px;
     text-transform: capitalize;
+}
+
+.Set {
+    position: absolute; 
+    top: 20px;
+    right: 100px;
+    
+}
+
+.mainbox {
+    background-color: #cb7e7ee0 ;
+    display: block;
+    padding: 20px 100px;
+    border-radius: 25px;
+    margin-top: 50px;
+}
+
+
+.Title {
+    position: absolute; 
+    top: 30px;
+    left: 100px;
+    display: block;
+    font-size: 25px;
+    font-weight: 650;
+    
 }
 

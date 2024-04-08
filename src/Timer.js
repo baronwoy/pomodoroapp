@@ -5,8 +5,11 @@ import PauseButton from './PauseButton';
 import SettingsButton from './SettingsButton';
 import { useContext, useState, useEffect, useRef } from 'react';
 import SettingsContext from './SettingsContext';
+import Pomodoro from './Pomodoro';
+import ShortBreak from './Short Break';
+
 const red = '#E51C1C'
-const green = '#50E450'
+const green = '#5CC45C'
 
 
 function Timer() {
@@ -30,6 +33,28 @@ function Timer() {
 
         secondsLeftRef.current = nextSeconds;
     }
+
+    function breakMode() {
+        const nextMode = modeRef.current === 'break'
+        const nextSeconds = settingsInfo.breakMinutes*60;
+        setMode(nextMode);
+        modeRef.current = nextMode
+        setSecondsLeft(nextSeconds)
+
+        secondsLeftRef.current = nextSeconds;
+    }
+
+    function workMode() {
+        const nextMode = modeRef.current === 'work'
+        const nextSeconds = settingsInfo.workMinutes*60;
+        setMode(nextMode);
+        modeRef.current = nextMode
+        setSecondsLeft(nextSeconds)
+
+        secondsLeftRef.current = nextSeconds;
+    }
+
+
 
     function tick() {
         secondsLeftRef.current--;
@@ -67,6 +92,21 @@ function Timer() {
 
     return (
         <div>
+            
+            <div style={{marginBottom: '20px'}} className='Set'>
+                <SettingsButton onClick= {() => settingsInfo.setShowSettings(true)}/>
+            </div>
+            <div style={{marginBottom: '20px'}} className='Title'>
+                Pomodoro Timer
+            </div>
+            
+            
+            <section className='mainbox'>
+
+            <div style={{marginBottom: '10px' }}>
+                <Pomodoro  />
+                <ShortBreak  />
+            </div>
             <CircularProgressbar 
             value={percentage} 
             text={minutes + ':' + seconds} 
@@ -84,8 +124,10 @@ function Timer() {
                 
                
             </div>
+            
+            </section>
             <div style={{marginTop: '20px'}}>
-                <SettingsButton onClick= {() => settingsInfo.setShowSettings(true)}/>
+                Time to Graft and Work Hard!
             </div>
 
         </div>
