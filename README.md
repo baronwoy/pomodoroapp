@@ -2,7 +2,6 @@
 
 ### Project Aim
 Simple Pomodoro app with 2 modes to assist with Time Management for tasks like studying, work, etc. <br />
-Used as an avenue to further my skills in Javascript and ReactJs
 
 ### Current State:
 <img src="https://github.com/baronwoy/pomodoroapp/assets/157763277/fe3b9827-b96f-458a-82ea-6360b182f34b" width="auto" height="auto">
