@@ -42,6 +42,7 @@ npm start
 * When page first loads the circle is shown green when it should be shown red
 * Currently clicking 'Pomodoro' or 'Short Break' has no function
 * Has no long break timer
+* No Reset button
 
 ### Roadmap
 * Implement functionality so a user can click short break to access it without going through pomodoro first and vice-versa
