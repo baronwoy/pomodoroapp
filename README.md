@@ -40,7 +40,7 @@ npm start
 ## Known Issues
 * Does not track your start time or save your preferences, so timer stops if your computer sleeps and the settings need to be reentered when the page is refreshed.
 * When page first loads the circle is shown green when it should be shown red
-* Currently clicking 'Pomodoro' or 'Short Break' has no function
+* Currently clicking the 'Pomodoro' or 'Short Break' text has no function
 * Has no long break timer
   
 ### Roadmap
