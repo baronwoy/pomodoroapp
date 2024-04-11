@@ -39,12 +39,8 @@ npm start
 
 ## Known Issues
 * Does not track your start time or save your preferences, so timer stops if your computer sleeps and the settings need to be reentered when the page is refreshed.
-* When page first loads the circle is shown green when it should be shown red
-* Currently clicking the 'Pomodoro' or 'Short Break' text has no function
-* Has no long break timer
   
 ### Roadmap
-* Implement functionality so a user can click short break to access it without going through pomodoro first and vice-versa
 * Implement long break functionality
 * Make the Settings page more visually appealing and more features to it
 * Implement to-do list funcitonality
