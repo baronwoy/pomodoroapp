@@ -16,8 +16,8 @@ function Timer() {
     const settingsInfo = useContext(SettingsContext)
 
     const [isPaused, setIsPaused] = useState(true)
-    const [mode, setMode] = useState('Work'); // work/break/null
-    const [secondsLeft, setSecondsLeft] = useState(0)
+    const [mode, setMode] = useState('work'); // work/break/null
+    const [secondsLeft, setSecondsLeft] = useState(settingsInfo.workMinutes*60)
 
     const secondsLeftRef = useRef(secondsLeft);
     const isPausedRef = useRef(isPaused);
@@ -33,7 +33,6 @@ function Timer() {
 
         secondsLeftRef.current = nextSeconds;
     }
-
     function breakMode() {
         const nextMode = modeRef.current === 'break'
         const nextSeconds = settingsInfo.breakMinutes*60;
@@ -45,15 +44,17 @@ function Timer() {
     }
 
     function workMode() {
-        const nextMode = modeRef.current === 'work'
-        const nextSeconds = settingsInfo.workMinutes*60;
+        
+        const nextMode = modeRef.current === 'work' ? 'break' : 'work';
+        if (nextMode === 'work') {
+        const nextSeconds = (nextMode === 'work' ? settingsInfo.workMinutes : settingsInfo.breakMinutes)*60;
         setMode(nextMode);
         modeRef.current = nextMode
         setSecondsLeft(nextSeconds)
 
         secondsLeftRef.current = nextSeconds;
+        }
     }
-
 
 
     function tick() {
@@ -104,8 +105,8 @@ function Timer() {
             <section className='mainbox'>
 
             <div style={{marginBottom: '10px' }}>
-                <Pomodoro  />
-                <ShortBreak  />
+                <Pomodoro onClick={() => {setIsPaused(true); isPausedRef.current = true; workMode()}} />
+                <ShortBreak  onClick={() => {setIsPaused(true); isPausedRef.current = true; breakMode()}} />
             </div>
             <CircularProgressbar 
             value={percentage} 
@@ -133,5 +134,9 @@ function Timer() {
         </div>
     );
 }
+
+
+
+
 
 export default Timer;

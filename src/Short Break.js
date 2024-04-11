@@ -1,6 +1,6 @@
 function ShortBreak(props) {
     return(
-        <button {...props}>
+        <button {...props} >
             Short Break
         </button>
     )
