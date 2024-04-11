@@ -1,7 +1,7 @@
 # Pomodoro App
 
 ### Project Aim
-Simple Pomodoro app with 2 modes to assist with Time Management for tasks like studying, work, etc. <br />
+Simple Pomodoro app with 2 customisable modes to assist with Time Management for tasks like studying, work, etc. <br />
 
 ### Current State:
 <img src="https://github.com/baronwoy/pomodoroapp/assets/157763277/142435ce-dad1-42ec-90a4-e9e52081ca5e" width="auto" height="auto">
